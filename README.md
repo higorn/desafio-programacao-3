@@ -45,8 +45,7 @@ Pontualmente estaremos avaliando:
 
 1. Entendimento sobre a linguagem utilizada.
 2. Conhecimentos sobre HTML/CSS/JS na criação das telas.
-3. Conhecimentos sobre conceitos de WEB e protocolos HTTP(s).
-4. Conhecimentos de "User Friendly".
+3. Conhecimentos de "User Friendly".
 
 ### Referência
 
