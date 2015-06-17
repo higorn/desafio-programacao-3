@@ -118,7 +118,6 @@ desafioControllers.controller('AppCtrl', ['$scope', function($scope) {
 
     var onSuccess = function(imageData)
     {
-        //$scope.user.foto.val = "data:image/jpeg;base64,"+imageData;
         $scope.user.foto.val = "data:image/jpeg;base64,"+imageData;
     }
 

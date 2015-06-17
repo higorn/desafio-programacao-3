@@ -30,8 +30,6 @@
                        maxlength="64" class="text-input" ng-keyup="validate($event)" required>
                 <span class="error" ng-show="user.email.error">
                     <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.email.error $}</span>
-<!--                    <i class="fa fa-exclamation-circle fa-fw"></i>
-                    <span ng-show="form.email.$error.email">E-mail inválido</span>-->
                 </span>
             </p>
 
@@ -49,7 +47,6 @@
                     <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.telefone.error $}</span>
                 </span>
             </p>
-            <!--<p><input ng-model="user.foto.val" id="foto" placeholder="Foto" class="text-input"></p>-->
             <p ng-show="user.foto.val">
                 <img src="{$ user.foto.val $}" class="img-thumbnail">
             </p>
@@ -66,33 +63,6 @@
                 </ons-button>
             </div>
         </form>
-<!--        <ons-list>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="Nome"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="Sobrenome"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="E-mail"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="CPF"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="Telefone"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="Foto"/>
-            </ons-list-item>
-        </ons-list>-->
-
     </div>
 
 </ons-page>
