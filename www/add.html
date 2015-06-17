@@ -7,17 +7,41 @@
         <div class="center">Cadastro</div>
     </ons-toolbar>
 
-    <div style="text-align: center">
+    <div style="text-align: center" ng-controller="AppCtrl">
         <h2>Informe os dados do usuário</h2>
         <ons-list>
             <ons-list-item>
-                <input type="text" class="input-text text-input--transparent" style="margin-top: 8px; width: 100%;" placeholder="Nome"/>
+                <input type="text" class="input-text text-input--transparent"
+                       style="margin-top: 8px; width: 100%;" placeholder="Nome"/>
             </ons-list-item>
             <ons-list-item>
-                <input type="text" class="input-text text-input--transparent" style="margin-top: 8px; width: 100%;" placeholder="Nome"/>
+                <input type="text" class="input-text text-input--transparent"
+                       style="margin-top: 8px; width: 100%;" placeholder="Sobrenome"/>
+            </ons-list-item>
+            <ons-list-item>
+                <input type="text" class="input-text text-input--transparent"
+                       style="margin-top: 8px; width: 100%;" placeholder="E-mail"/>
+            </ons-list-item>
+            <ons-list-item>
+                <input type="text" class="input-text text-input--transparent"
+                       style="margin-top: 8px; width: 100%;" placeholder="CPF"/>
+            </ons-list-item>
+            <ons-list-item>
+                <input type="text" class="input-text text-input--transparent"
+                       style="margin-top: 8px; width: 100%;" placeholder="Telefone"/>
+            </ons-list-item>
+            <ons-list-item>
+                <input type="text" class="input-text text-input--transparent"
+                       style="margin-top: 8px; width: 100%;" placeholder="Foto"/>
             </ons-list-item>
         </ons-list>
-        <ons-button ng-click="app.slidingMenu.toggleMenu()">Toggle Menu</ons-button>
+        <div class="content-padded">
+            <!--<ons-button ng-click="app.slidingMenu.toggleMenu()">Toggle Menu</ons-button>-->
+            <ons-button ng-click="onClick($event)" modifier="large"
+                        class="ng-isolate-scope button effeckt-button button--large slide-left">
+                Salvar
+            </ons-button>
+        </div>
 
     </div>
 
