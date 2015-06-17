@@ -7,36 +7,41 @@
         <div class="center">Cadastro</div>
     </ons-toolbar>
 
-    <div style="text-align: center" ng-controller="AppCtrl">
+    <div style="text-align: center">
         <h2>Informe os dados do usuário</h2>
-        <ons-list>
+        <p><input ng-model="user.nome" placeholder="Nome" class="text-input"></p>
+        <p><input ng-model="user.sobrenome" placeholder="Sobrenome" class="text-input"></p>
+        <p><input ng-model="user.email" placeholder="E-mail" class="text-input"></p>
+        <p><input ng-model="user.cpf" placeholder="CPF" class="text-input"></p>
+        <p><input ng-model="user.telefone" placeholder="Telefone" class="text-input"></p>
+        <p><input ng-model="user.foto" placeholder="Foto" class="text-input"></p>
+<!--        <ons-list>
             <ons-list-item>
-                <input type="text" class="input-text text-input--transparent"
+                <input type="text" class="input-text text-input&#45;&#45;transparent"
                        style="margin-top: 8px; width: 100%;" placeholder="Nome"/>
             </ons-list-item>
             <ons-list-item>
-                <input type="text" class="input-text text-input--transparent"
+                <input type="text" class="input-text text-input&#45;&#45;transparent"
                        style="margin-top: 8px; width: 100%;" placeholder="Sobrenome"/>
             </ons-list-item>
             <ons-list-item>
-                <input type="text" class="input-text text-input--transparent"
+                <input type="text" class="input-text text-input&#45;&#45;transparent"
                        style="margin-top: 8px; width: 100%;" placeholder="E-mail"/>
             </ons-list-item>
             <ons-list-item>
-                <input type="text" class="input-text text-input--transparent"
+                <input type="text" class="input-text text-input&#45;&#45;transparent"
                        style="margin-top: 8px; width: 100%;" placeholder="CPF"/>
             </ons-list-item>
             <ons-list-item>
-                <input type="text" class="input-text text-input--transparent"
+                <input type="text" class="input-text text-input&#45;&#45;transparent"
                        style="margin-top: 8px; width: 100%;" placeholder="Telefone"/>
             </ons-list-item>
             <ons-list-item>
-                <input type="text" class="input-text text-input--transparent"
+                <input type="text" class="input-text text-input&#45;&#45;transparent"
                        style="margin-top: 8px; width: 100%;" placeholder="Foto"/>
             </ons-list-item>
-        </ons-list>
+        </ons-list>-->
         <div class="content-padded">
-            <!--<ons-button ng-click="app.slidingMenu.toggleMenu()">Toggle Menu</ons-button>-->
             <ons-button ng-click="onClick($event)" modifier="large"
                         class="ng-isolate-scope button effeckt-button button--large slide-left">
                 Salvar

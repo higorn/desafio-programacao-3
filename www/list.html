@@ -9,14 +9,8 @@
 
     <div style="text-align: center">
         <ons-list>
-            <ons-list-item>
-                <label>Nicanor</label>
-            </ons-list-item>
-            <ons-list-item>
-                <label>Lauterio</label>
-            </ons-list-item>
-            <ons-list-item>
-                <label>João</label>
+            <ons-list-item ng-repeat="user in users">
+                <label>{$ user.nome $}</label>
             </ons-list-item>
 
         </ons-list>
