@@ -1,0 +1,31 @@
+<ons-dialog cancelable>
+
+    <div style="text-align: center">
+        <ons-list>
+            <ons-list-item modifier="tappable">
+                Nome: {$ user.nome.val $}
+            </ons-list-item>
+            <ons-list-item modifier="tappable">
+                Sobrenome: {$ user.sobrenome.val $}
+            </ons-list-item>
+            <ons-list-item modifier="tappable">
+                E-mail: {$ user.email.val $}
+            </ons-list-item>
+            <ons-list-item modifier="tappable">
+                CPF: {$ user.cpf.val $}
+            </ons-list-item>
+            <ons-list-item modifier="tappable">
+                Telefone: {$ user.telefone.val $}
+            </ons-list-item>
+            <ons-list-item modifier="tappable">
+                <img src="{$ user.foto.val $}" class="img-thumbnail">
+            </ons-list-item>
+
+        </ons-list>
+        <p>
+            <ons-button modifier="large" ng-click="dialogs['user.html'].hide()">Ok</ons-button>
+        </p>
+
+    </div>
+
+</ons-dialog>

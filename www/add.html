@@ -7,14 +7,65 @@
         <div class="center">Cadastro</div>
     </ons-toolbar>
 
-    <div style="text-align: center">
-        <h2>Informe os dados do usuário</h2>
-        <p><input ng-model="user.nome" placeholder="Nome" class="text-input"></p>
-        <p><input ng-model="user.sobrenome" placeholder="Sobrenome" class="text-input"></p>
-        <p><input ng-model="user.email" placeholder="E-mail" class="text-input"></p>
-        <p><input ng-model="user.cpf" placeholder="CPF" class="text-input"></p>
-        <p><input ng-model="user.telefone" placeholder="Telefone" class="text-input"></p>
-        <p><input ng-model="user.foto" placeholder="Foto" class="text-input"></p>
+    <div style="text-align: right">
+        <h2 style="text-align: center">Informe os dados do usuário</h2>
+        <form name="form" novalidate>
+            <p>
+                <input ng-model="user.nome.val" id="nome" name="nome" placeholder="Nome" maxlength="32"
+                       class="text-input" ng-keyup="validate($event)" required>
+                <span class="error" ng-show="user.nome.error">
+                    <!--<div class="arrow"></div>-->
+                    <i class="fa fa-exclamation-circle fa-fw"></i><span style="text-align: right">{$ user.nome.error $}</span>
+                </span>
+            </p>
+            <p>
+                <input ng-model="user.sobrenome.val" id="sobrenome" name="sobrenome" placeholder="Sobrenome"
+                       maxlength="32" class="text-input" ng-keyup="validate($event)" required>
+                <span class="error" ng-show="user.sobrenome.error">
+                    <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.sobrenome.error $}</span>
+                </span>
+            </p>
+            <p>
+                <input ng-model="user.email.val" id="email" name="email" placeholder="E-mail" type="email"
+                       maxlength="64" class="text-input" ng-keyup="validate($event)" required>
+                <span class="error" ng-show="user.email.error">
+                    <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.email.error $}</span>
+<!--                    <i class="fa fa-exclamation-circle fa-fw"></i>
+                    <span ng-show="form.email.$error.email">E-mail inválido</span>-->
+                </span>
+            </p>
+
+            <p>
+                <input ng-model="user.cpf.val" id="cpf" name="cpf" placeholder="CPF" type="text" pattern="\d{11}"
+                       maxlength="11" class="text-input" ng-keyup="validate($event)" required>
+                <span class="error" ng-show="user.cpf.error">
+                    <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.cpf.error $}</span>
+                </span>
+            </p>
+            <p>
+                <input ng-model="user.telefone.val" id="telefone" name="telefone" placeholder="Telefone" type="tel"
+                       maxlength="15" class="text-input" ng-keyup="validate($event)" required>
+                <span class="error" ng-show="user.telefone.error">
+                    <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.telefone.error $}</span>
+                </span>
+            </p>
+            <!--<p><input ng-model="user.foto.val" id="foto" placeholder="Foto" class="text-input"></p>-->
+            <p ng-show="user.foto.val">
+                <img src="{$ user.foto.val $}" class="img-thumbnail">
+            </p>
+            <div class="content-padded">
+                <ons-button ng-click="takePic()" modifier="large"
+                            class="ng-isolate-scope button effeckt-button button--large slide-left">
+                    <i class="fa fa-camera fa-fw"></i>
+                </ons-button>
+            </div>
+            <div class="content-padded">
+                <ons-button ng-click="add()" modifier="large"
+                            class="ng-isolate-scope button effeckt-button button--large slide-left">
+                    Salvar
+                </ons-button>
+            </div>
+        </form>
 <!--        <ons-list>
             <ons-list-item>
                 <input type="text" class="input-text text-input&#45;&#45;transparent"
@@ -41,12 +92,6 @@
                        style="margin-top: 8px; width: 100%;" placeholder="Foto"/>
             </ons-list-item>
         </ons-list>-->
-        <div class="content-padded">
-            <ons-button ng-click="onClick($event)" modifier="large"
-                        class="ng-isolate-scope button effeckt-button button--large slide-left">
-                Salvar
-            </ons-button>
-        </div>
 
     </div>
 

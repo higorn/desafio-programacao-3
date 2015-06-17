@@ -9,8 +9,15 @@
 
     <div style="text-align: center">
         <ons-list>
-            <ons-list-item ng-repeat="user in users">
-                <label>{$ user.nome $}</label>
+            <ons-list-item ng-repeat="user in users"
+                           ng-click="show('user.html', user)"
+                           modifier="tappable">
+                <img src="{$ user.foto.val $}" class="img-thumbnail" style="float: left">
+                <span style="float: left">{$ user.nome.val $}</span>
+                <!--<label>{$ user.nome.val $}</label>-->
+                <ons-button style="float: right" ng-click="del(user)">
+                    <i class="fa fa-trash-o fa-lg"></i>
+                </ons-button>
             </ons-list-item>
 
         </ons-list>
