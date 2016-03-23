@@ -10,12 +10,9 @@
     <div style="text-align: right">
         <h2 style="text-align: center">Informe os dados do usuário</h2>
         <form name="form" novalidate>
-            <p ng-show="user.foto.val">
-                <img src="{$ user.foto.val $}" class="img-thumbnail">
-            </p>
             <p>
                 <input ng-model="user.nome.val" id="nome" name="nome" placeholder="Nome" maxlength="32"
-                       class="text-input" ng-keyup="validate(form.nome, $event)" required>
+                       class="text-input" ng-keyup="validate($event)" required>
                 <span class="error" ng-show="user.nome.error">
                     <!--<div class="arrow"></div>-->
                     <i class="fa fa-exclamation-circle fa-fw"></i><span style="text-align: right">{$ user.nome.error $}</span>
@@ -23,36 +20,36 @@
             </p>
             <p>
                 <input ng-model="user.sobrenome.val" id="sobrenome" name="sobrenome" placeholder="Sobrenome"
-                       maxlength="32" class="text-input" ng-keyup="validate(form.sobrenome, $event)" required>
+                       maxlength="32" class="text-input" ng-keyup="validate($event)" required>
                 <span class="error" ng-show="user.sobrenome.error">
                     <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.sobrenome.error $}</span>
                 </span>
             </p>
             <p>
                 <input ng-model="user.email.val" id="email" name="email" placeholder="E-mail" type="email"
-                       maxlength="64" class="text-input" required>
+                       maxlength="64" class="text-input" ng-keyup="validate($event)" required>
                 <span class="error" ng-show="user.email.error">
                     <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.email.error $}</span>
-<!--                    <i class="fa fa-exclamation-circle fa-fw"></i>
-                    <span ng-show="form.email.$error.email">E-mail inválido</span>-->
                 </span>
             </p>
 
             <p>
-                <input ng-model="user.cpf.val" id="cpf" name="cpf" placeholder="CPF" type="number" maxlength="11"
-                       class="text-input" ng-keyup="validate(form.cpf, $event)" required>
+                <input ng-model="user.cpf.val" id="cpf" name="cpf" placeholder="CPF" type="text" pattern="\d{11}"
+                       maxlength="11" class="text-input" ng-keyup="validate($event)" required>
                 <span class="error" ng-show="user.cpf.error">
                     <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.cpf.error $}</span>
                 </span>
             </p>
             <p>
                 <input ng-model="user.telefone.val" id="telefone" name="telefone" placeholder="Telefone" type="tel"
-                       class="text-input" ng-keyup="validate(form.telefone, $event)" required>
+                       maxlength="15" class="text-input" ng-keyup="validate($event)" required>
                 <span class="error" ng-show="user.telefone.error">
                     <i class="fa fa-exclamation-circle fa-fw"></i><span>{$ user.telefone.error $}</span>
                 </span>
             </p>
-            <!--<p><input ng-model="user.foto.val" id="foto" placeholder="Foto" class="text-input"></p>-->
+            <p ng-show="user.foto.val">
+                <img src="{$ user.foto.val $}" class="img-thumbnail">
+            </p>
             <div class="content-padded">
                 <ons-button ng-click="takePic()" modifier="large"
                             class="ng-isolate-scope button effeckt-button button--large slide-left">
@@ -66,33 +63,6 @@
                 </ons-button>
             </div>
         </form>
-<!--        <ons-list>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="Nome"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="Sobrenome"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="E-mail"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="CPF"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="Telefone"/>
-            </ons-list-item>
-            <ons-list-item>
-                <input type="text" class="input-text text-input&#45;&#45;transparent"
-                       style="margin-top: 8px; width: 100%;" placeholder="Foto"/>
-            </ons-list-item>
-        </ons-list>-->
-
     </div>
 
 </ons-page>

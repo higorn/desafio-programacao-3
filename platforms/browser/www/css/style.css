@@ -76,8 +76,11 @@ background-color: #47484d;
 }
 
 .img-thumbnail {
+    /*
+  display: block;
   display: inline-block;
-  max-width: 100%;
+  */
+  max-width: 20%;
   height: auto;
   padding: 4px;
   line-height: 1.42857143;

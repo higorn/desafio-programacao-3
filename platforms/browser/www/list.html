@@ -12,9 +12,8 @@
             <ons-list-item ng-repeat="user in users"
                            ng-click="show('user.html', user)"
                            modifier="tappable">
-                <img src="{$ user.foto.val $}" class="thumbnail img-circle">
-                <label>{$ user.nome.val $}</label>
-                <ons-button class="right" style="float: right" ng-click="del(user)">
+                <span style="float: left">{$ user.nome.val $}</span>
+                <ons-button style="float: right" ng-click="del(user)">
                     <i class="fa fa-trash-o fa-lg"></i>
                 </ons-button>
             </ons-list-item>
